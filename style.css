@@ -1,0 +1,99 @@
+body{
+    background: rgb(230,0,140);
+    background: linear-gradient(90deg, rgba(230,0,140,1) 0%, rgba(117,0,86,1) 100%);
+  }
+  #columns {
+    column-width: 320px;
+    column-gap: 15px;
+  /* width: 95%; */
+    /* max-width: 1100px; */
+    /* margin: 50px auto; */
+}
+
+div#columns figure {
+    background: #fefefe;
+    /* border: 2px solid #fefefe; */
+    box-shadow: 0 1px 2px rgba(34, 25, 25, 0.99);
+    margin: 15px 2px 15px;
+    padding: 15px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 1px 18px -1px rgba(0,0,0,0.99);
+    -moz-box-shadow: 0px 1px 18px -1px rgba(0,0,0,0.99);
+    box-shadow: 0px 1px 18px -1px rgba(0,0,0,0.99);
+    transition: opacity .4s ease-in-out;
+  display: inline-block;
+  column-break-inside: avoid;
+}
+
+div#columns figure img {
+    width: 100%; height: auto;
+    /* border-bottom: 1px solid #ccc; */
+    padding-bottom: 15px;
+    margin-bottom: 5px;
+}
+
+div#columns figure figcaption {
+    color: #444;
+  line-height: 1.5;
+}
+
+div#columns small { 
+  font-size: 1rem;
+  float: right; 
+  text-transform: uppercase;
+  color: #aaa;
+} 
+
+div#columns small a { 
+  color: #666; 
+  text-decoration: none; 
+  transition: .4s color;
+}
+
+/* div#columns:hover figure:not(:hover) {
+    opacity: 0.4;
+} */
+.visit-link{
+  text-align: center;
+}
+@media screen and (max-width: 750px) { 
+  #columns { column-gap: 0px; }
+}
+
+
+
+
+
+.title-container{
+    text-align: center;
+}
+
+span{
+  top: 250px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size:120px;
+	letter-spacing:0.1em;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: white;
+  text-shadow: 
+						8px 8px #ff1f8f,
+						20px 20px #000000;
+}
+@media screen and (max-width: 750px) { 
+    span{
+        top: 250px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size:60px;
+          letter-spacing:0.1em;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: white;
+        text-shadow: 
+                              5px 5px #ff1f8f,
+                              10px 10px #000000;
+      }
+  }
