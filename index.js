@@ -1,4 +1,4 @@
-let num  = "1"
+let num  = "0"
 window.onscroll = function(ev) {
     console.log("window.innerHeight + window.scrollY)",window.innerHeight+window.scrollY)
     console.log("document.body.offsetHeight",document.body.offsetHeight)
@@ -17,7 +17,7 @@ var startMemes = (page) => {
           'Accept': 'application/json, text/plain, */*',
           'Content-Type': 'application/json'
         },
-         body: JSON.stringify({username: "",startPoint:page,like:"",category:""})
+         body: JSON.stringify({username: "",startPoint:parseInt(page),like:"",category:""})
       }).then(res=>res.json())
         .then(res => getMemes(res))
         .catch(err => console.log(err))
