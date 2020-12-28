@@ -29,16 +29,21 @@ var getMemes = (res) => {
     for (i in res){
         console.log(res[i].url)
         ele.innerHTML += 
-        `<figure class=>
-        <img src=${res[i].url}></img>
+        `<figure>
+        <img class="memes" src=${res[i].url}></img>
         <figcaption class="port-title"></figcaption>
         <figcaption></figcaption>
         <br>
-        <img src=${res[i].profilePhoto} style="width:50px"></img><figcaption><b>${res[i].username}</b></figcaption>
         <br>
         <div class="visit-link">
-        <a class="box" href="" target="_blank"><button class="btn-blue">Visit</button></a>
         </div>
         </figure>`;
     }
 } 
+//        <a class="box" href="index copy.html"><button class="btn-blue">Visit</button></a>
+{/* <div class="userInfo">
+<img src=${res[i].profilePhoto} style="width:50px;height: 50px;
+width: 50px;"></img>
+<figcaption class="userTitle"><b>${res[i].username}</b>
+</figcaption>
+</div> */}
