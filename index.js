@@ -17,7 +17,7 @@ var startMemes = (page) => {
           'Accept': 'application/json, text/plain, */*',
           'Content-Type': 'application/json'
         },
-         body: JSON.stringify({username: "yo",startPoint:page,like:"",category:""})
+         body: JSON.stringify({username: "",startPoint:page,like:"",category:""})
       }).then(res=>res.json())
         .then(res => getMemes(res))
         .catch(err => console.log(err))
@@ -31,15 +31,14 @@ var getMemes = (res) => {
         ele.innerHTML += 
         `<figure class=>
         <img src=${res[i].url}></img>
-
+        <figcaption class="port-title"></figcaption>
+        <figcaption></figcaption>
+        <br>
+        <img src=${res[i].profilePhoto} style="width:50px"></img><figcaption><b>${res[i].username}</b></figcaption>
+        <br>
+        <div class="visit-link">
+        <a class="box" href="" target="_blank"><button class="btn-blue">Visit</button></a>
+        </div>
         </figure>`;
     }
 } 
-{/* <figcaption class="port-title"></figcaption>
-<figcaption></figcaption>
-<br>
-<figcaption><b>Technologies</b></figcaption>
-<br>
-<div class="visit-link">
-<a class="box" href="" target="_blank"><button class="btn-blue">Visit</button></a>
-</div> */}
