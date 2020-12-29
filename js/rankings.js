@@ -11,7 +11,7 @@ window.onscroll = function(ev) {
     }
 };
 var startMemes = (page) => {
-    fetch('https://ancient-springs-47837.herokuapp.com/get-all-memes-v2', {
+    fetch('https://ancient-springs-47837.herokuapp.com/get-memer-rankings-v2', {
         method: 'post', 
         headers: {
           'Accept': 'application/json, text/plain, */*',
@@ -25,31 +25,17 @@ var startMemes = (page) => {
 startMemes(num)
 
 var getMemes = (res) => {
-    let ele = document.getElementById('columns')
+    console.log(res)
+    let ele = document.getElementById('rankings-column')
     for (i in res){
         console.log(res[i].url)
         ele.innerHTML += 
-        `<figure>
-        <img class="memes" src=${res[i].url}></img>
-        <figcaption class="port-title"></figcaption>
-        <figcaption></figcaption>
-        <br>
-        <br>
-        <div class="visit-link">
-        </div>
-        </figure>`;
+        `<div class="rankings-container">
+        <img class="memers" src=${res[i].profilePhoto}></img>
+        <h1>${res[i].username}</h1>
+        <p>Level: ${res[i].level}</p>
+        <p>Exp: ${res[i].exp}/100</p>
+        <p>Memes: ${res[i].memes}</p>
+        </div>`;
     }
 } 
-function myFunction(x) {
-    x.classList.toggle("change");
-    let ele = document.getElementById('modal')
-    ele.classList.toggle("hidden");
-  }
-  
-//        <a class="box" href="index copy.html"><button class="btn-blue">Visit</button></a>
-{/* <div class="userInfo">
-<img src=${res[i].profilePhoto} style="width:50px;height: 50px;
-width: 50px;"></img>
-<figcaption class="userTitle"><b>${res[i].username}</b>
-</figcaption>
-</div> */}

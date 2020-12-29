@@ -2,70 +2,38 @@ body{
     background: rgb(230,0,140);
     background: linear-gradient(90deg, rgba(230,0,140,1) 0%, rgba(117,0,86,1) 100%);
   }
-  #columns {
-    column-width: 320px;
-    column-gap: 15px;
-    display: flex;
-    flex-wrap: wrap;
-    opacity: 1;
-    justify-content: center;
-    flex-direction: row;
-    align-items: center;
-  }
-div#columns figure {
-    width: 300px;
-    /* background: #fefefe; */
-    /* border: 2px solid #fefefe; */
-    /* box-shadow: 0 1px 2px rgba(34, 25, 25, 0.99); */
-    margin: -10px;
-    padding: 15px;
-    padding-bottom: 10px;
-    display: inline-block;
-    /* border-radius: 5px;
-    -webkit-box-shadow: 0px 1px 18px -1px rgba(0,0,0,0.99);
-    -moz-box-shadow: 0px 1px 18px -1px rgba(0,0,0,0.99);
-    box-shadow: 0px 1px 18px -1px rgba(0,0,0,0.99); */
 
-  display: inline-block;
-  column-break-inside: avoid;
+#rankings-column{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
 }
-.memes{
+.rankings-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 150px;
+    width: 75%;
+    background-color: white;
+    margin-bottom: 50px;
     border-radius: 15px;
+    padding:25px;
     -webkit-box-shadow: 0px 1px 18px -1px rgba(0,0,0,0.99);
     -moz-box-shadow: 0px 1px 18px -1px rgba(0,0,0,0.99);
     box-shadow: 0px 1px 18px -1px rgba(0,0,0,0.99);
 }
-div#columns figure img {
-    width: 100%; height: auto;
-    /* border-bottom: 1px solid #ccc; */
-    /* padding-bottom: 15px;
-    margin-bottom: 5px; */
+
+.memers{
+    height: 150px;
+    border-radius: 15px;
 }
 
-div#columns figure figcaption {
-    color: #444;
-  line-height: 1.5;
-}
-
-div#columns small { 
-  font-size: 1rem;
-  float: right; 
-  text-transform: uppercase;
-  color: #aaa;
-} 
-
-div#columns small a { 
-  color: #666; 
-  text-decoration: none; 
-  transition: .4s color;
-}
-
-/* div#columns:hover figure:not(:hover) {
-    opacity: 0.4;
-} */
 .visit-link{
   text-align: center;
 }
+
 @media screen and (max-width: 750px) { 
   #columns { column-gap: 0px; }
 }
@@ -165,4 +133,18 @@ div#columns small a {
                               5px 5px #ff1f8f,
                               10px 10px #000000;
       }
+      .rankings-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 500px;
+        width: 50%;
+        background-color: white;
+        margin-bottom: 50px;
+        border-radius: 15px;
+        padding:25px;
+        -webkit-box-shadow: 0px 1px 18px -1px rgba(0,0,0,0.99);
+        -moz-box-shadow: 0px 1px 18px -1px rgba(0,0,0,0.99);
+        box-shadow: 0px 1px 18px -1px rgba(0,0,0,0.99);
+    }
   }
